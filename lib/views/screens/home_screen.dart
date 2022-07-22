@@ -1,10 +1,10 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../models/app_const_model.dart';
+import '../widgets/blocks/featured_plants_block.dart';
 import '../widgets/header_circle_widget.dart';
-import '../widgets/recommened_list_widget.dart';
+import '../widgets/blocks/recommened_list_widget.dart';
 import '../widgets/title_width_button_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    Size size = MediaQuery.of(context).size;
+    // Size size = MediaQuery.of(context).size;
 
     return Scaffold(
       appBar: homeAppBar(),
@@ -28,19 +28,43 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const HeaderCircleWidget(),
-            const SizedBox(height: AppConst.margin),
-
-            // Block Recomment
-            TitleWithButtonWidget(
-                title: 'Recommened', button: 'More', onPress: () {}),
-            const SizedBox(height: AppConst.margin / 3),
-            const RecommenedListWidget(),
-
-            // Block Feature plant
+            //
             const SizedBox(height: AppConst.margin),
             TitleWithButtonWidget(
-                title: 'Featured Plants', button: 'More', onPress: () {}),
-            const SizedBox(height: AppConst.margin / 2.5),
+              title: 'Recommened',
+              button: 'More',
+              onPress: () {},
+              padding: const EdgeInsets.only(
+                  left: AppConst.padding,
+                  right: AppConst.padding,
+                  bottom: AppConst.padding / 1.5),
+            ),
+            const RecommenedListBlock(),
+            //
+            const SizedBox(height: AppConst.margin),
+            TitleWithButtonWidget(
+              title: 'Featured Plants',
+              button: 'More',
+              onPress: () {},
+              padding: const EdgeInsets.only(
+                  left: AppConst.padding,
+                  right: AppConst.padding,
+                  bottom: AppConst.padding / 1.5),
+            ),
+            const FeaturedPlantsBlock(),
+            //
+            const SizedBox(height: AppConst.margin),
+            TitleWithButtonWidget(
+              title: 'Best Seller',
+              button: 'More',
+              onPress: () {},
+              padding: const EdgeInsets.only(
+                  left: AppConst.padding,
+                  right: AppConst.padding,
+                  bottom: AppConst.padding / 1.5),
+            ),
+            const RecommenedListBlock(),
+            const SizedBox(height: AppConst.padding),
           ],
         ),
       ),

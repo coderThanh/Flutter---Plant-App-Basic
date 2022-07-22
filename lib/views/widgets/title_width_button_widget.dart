@@ -6,12 +6,14 @@ class TitleWithButtonWidget extends StatefulWidget {
   final String title;
   final String button;
   final VoidCallback onPress;
+  final EdgeInsets? padding;
 
   const TitleWithButtonWidget({
     Key? key,
     required this.title,
     required this.button,
     required this.onPress,
+    this.padding,
   }) : super(key: key);
 
   @override
@@ -21,8 +23,8 @@ class TitleWithButtonWidget extends StatefulWidget {
 class _TitleWithButtonWidgetState extends State<TitleWithButtonWidget> {
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppConst.padding),
+    return Container(
+      padding: widget.padding,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
