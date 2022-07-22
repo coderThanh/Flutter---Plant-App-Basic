@@ -7,6 +7,7 @@ class AppConst {
   static const background = Color(0xFFF9F8FD);
 
   static const double padding = 20.0;
+  static const double margin = 40.0;
 
   // Assests
   static const String iconMenu = 'assets/icons/menu.svg';

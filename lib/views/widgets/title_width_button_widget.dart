@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import '../../models/app_const_model.dart';
 
-class title_with_button_widget extends StatefulWidget {
-  String title;
-  String button;
-  VoidCallback onPress;
+class TitleWithButtonWidget extends StatefulWidget {
+  final String title;
+  final String button;
+  final VoidCallback onPress;
 
-  title_with_button_widget({
+  const TitleWithButtonWidget({
     Key? key,
     required this.title,
     required this.button,
@@ -15,11 +15,10 @@ class title_with_button_widget extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<title_with_button_widget> createState() =>
-      _title_with_button_widgetState();
+  State<TitleWithButtonWidget> createState() => _TitleWithButtonWidgetState();
 }
 
-class _title_with_button_widgetState extends State<title_with_button_widget> {
+class _TitleWithButtonWidgetState extends State<TitleWithButtonWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -41,21 +40,22 @@ class _title_with_button_widgetState extends State<title_with_button_widget> {
             height: 30,
             child: TextButton(
               onPressed: widget.onPress,
-              child: Text(
-                widget.button,
-                style: TextStyle(
-                  fontSize: 13,
-                  color: Colors.white,
-                  height: 1,
-                ),
-              ),
               style: TextButton.styleFrom(
                 backgroundColor: AppConst.primary,
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 3),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 3),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(100),
                 ),
                 primary: Colors.white10,
+              ),
+              child: Text(
+                widget.button,
+                style: const TextStyle(
+                  fontSize: 13,
+                  color: Colors.white,
+                  height: 1,
+                ),
               ),
             ),
           ),
