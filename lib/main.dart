@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'models/app_const_model.dart';
 import 'models/text_theme_model.dart';
-import 'views/screens/home_screen.dart';
+import 'views/screens/home/home_screen.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/app_const_model.dart';
-import '../product_box_image.dart';
+import '../../../../models/app_const_model.dart';
+import '../../../widgets/product_box_image.dart';
+import '../../product_detail/product_detail_screen.dart';
 
 class FeaturedPlantsBlock extends StatefulWidget {
   const FeaturedPlantsBlock({Key? key}) : super(key: key);
@@ -26,6 +27,12 @@ class _FeaturedPlantsBlockState extends State<FeaturedPlantsBlock> {
             margin: const EdgeInsets.symmetric(
               horizontal: AppConst.padding,
             ),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
           ),
           ProductBoxImage(
             size: size,
@@ -34,6 +41,12 @@ class _FeaturedPlantsBlockState extends State<FeaturedPlantsBlock> {
             margin: const EdgeInsets.only(
               right: AppConst.padding,
             ),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
           ),
           ProductBoxImage(
             size: size,
@@ -42,6 +55,12 @@ class _FeaturedPlantsBlockState extends State<FeaturedPlantsBlock> {
             margin: const EdgeInsets.only(
               right: AppConst.padding,
             ),
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
           ),
         ],
       ),

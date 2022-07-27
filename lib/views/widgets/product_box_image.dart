@@ -9,17 +9,19 @@ class ProductBoxImage extends StatelessWidget {
     required this.image,
     this.ratio,
     this.margin,
+    this.onTap,
   }) : super(key: key);
 
   final Size size;
   final double? ratio;
   final EdgeInsets? margin;
   final String image;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         clipBehavior: Clip.antiAliasWithSaveLayer,
         width: size.width * 0.7,

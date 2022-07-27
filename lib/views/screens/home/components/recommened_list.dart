@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/app_const_model.dart';
-import '../product_box_default_widget.dart';
+import '../../../../models/app_const_model.dart';
+import '../../../widgets/product_box_default_widget.dart';
+import '../../product_detail/product_detail_screen.dart';
 
 class RecommenedListBlock extends StatelessWidget {
   const RecommenedListBlock({
@@ -23,7 +24,12 @@ class RecommenedListBlock extends StatelessWidget {
             price: '400',
             img: 'assets/images/image_1.png',
             country: 'Russia',
-            onPress: () {},
+            onPress: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
             margin: const EdgeInsets.symmetric(horizontal: AppConst.padding),
           ),
           ProductBoxDefault(
@@ -33,7 +39,12 @@ class RecommenedListBlock extends StatelessWidget {
             img: 'assets/images/image_2.png',
             country: 'Russia',
             margin: const EdgeInsets.only(right: AppConst.padding),
-            onPress: () {},
+            onPress: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
           ),
           ProductBoxDefault(
             size: size,
@@ -42,7 +53,12 @@ class RecommenedListBlock extends StatelessWidget {
             img: 'assets/images/image_3.png',
             country: 'Russia',
             margin: const EdgeInsets.only(right: AppConst.padding),
-            onPress: () {},
+            onPress: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const ProductDetailSceen()));
+            },
           ),
         ],
       ),
