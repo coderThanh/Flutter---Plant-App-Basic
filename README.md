@@ -2,11 +2,17 @@
 
 A new Flutter project to up my skill.
 
-## Getting Started
-
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+Home Screen
+
+<img src="git_image/home-screen.png" width="200"/>
+<br/><br/>
+Product Sreen
+
+<img src="git_image/product-detail.png" width="200"/>
+<br/><br/>
+A few resources to get you started if this is my Flutter project:
 
 - [Youtube reference](https://www.youtube.com/watch?v=LN668OAUrK4)
 - [Github reference](https://github.com/abuanwar072/Plant-App-Flutter-UI)
