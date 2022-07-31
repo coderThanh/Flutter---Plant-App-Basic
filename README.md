@@ -6,11 +6,11 @@ This project is a starting point for a Flutter application.
 
 Home Screen
 
-<img src="git_image/home-screen.png" width="200"/>
+<img src="assets/git_image/home-screen.png" width="200"/>
 <br/><br/>
 Product Sreen
 
-<img src="git_image/product-detail.png" width="200"/>
+<img src="assets/git_image/product-detail.png" width="200"/>
 <br/><br/>
 A few resources to get you started if this is my Flutter project:
 
