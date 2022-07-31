@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'components/actiont_side.dart';
-import 'components/slide.dart';
+import 'components/body.dart';
+import 'components/bottom_navigator_bar.dart';
 
 class ProductDetailSceen extends StatefulWidget {
   const ProductDetailSceen({Key? key}) : super(key: key);
@@ -19,22 +19,9 @@ class _ProductDetailSceenState extends State<ProductDetailSceen> {
     return AnnotatedRegion(
       value: SystemUiOverlayStyle.dark,
       child: Scaffold(
-        body: SafeArea(
-          child: Column(
-            children: [
-              SizedBox(
-                height: (size.height * 0.562 > 400) ? size.height * 0.562 : 400,
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: const [
-                    ActionSide(),
-                    Expanded(child: SliderImage()),
-                  ],
-                ),
-              )
-            ],
-          ),
-        ),
+        body: Body(size: size),
+        bottomNavigationBar: BottomNavidatorBar(size: size),
+        extendBody: true,
       ),
     );
   }
